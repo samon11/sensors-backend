@@ -1,7 +1,3 @@
-#Grab input string
-data = "LUM:34.29,tF:0.01,tF_B:68.39,Pa:1829.083,Mt:0.65"
-
-
 import re
 
 def parse(data):
@@ -25,5 +21,3 @@ def parse(data):
             dict['humidity'] = strData[i]
             return dict
         i = i + 1
-
-print(parse(data))
