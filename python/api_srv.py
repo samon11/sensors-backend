@@ -1,6 +1,7 @@
 from flask import Flask, request
 from database import Airdata, session
 import re
+#from Dict import parse
 
 app = Flask(__name__)
 
@@ -14,9 +15,8 @@ def insert_data():
         data = request.get_data(as_text=True, cache=False)
         print(data)
         
-        # TODO: parse the request data and return a dictionary
         # parsed_data = parse(data)
-
+	
         # insert parsed data into database
         """
         new_insert = Airdata(light=parsed_data['light'],
