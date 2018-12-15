@@ -10,14 +10,14 @@ def parse(data):
     strData = re.findall(r"\:(.*?)\,",newString)
     while i <= len(dict):
         if i == 0:
-            dict['light'] = strData[i]
+            dict['light'] = float(strData[i])
         if i == 1:
-            dict['temp'] = strData[i]
+            dict['temp'] = float(strData[i])
         if i == 2:
-            dict['temp_barom'] = strData[i]
+            dict['temp_barom'] = float(strData[i])
         if i == 3:
-            dict['pressure'] = strData[i]
+            dict['pressure'] = float(strData[i])
         if i == 4:
-            dict['humidity'] = strData[i]
+            dict['humidity'] = float(strData[i])
             return dict
         i = i + 1
