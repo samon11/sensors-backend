@@ -18,6 +18,6 @@ def parse(data):
         if i == 3:
             dict['pressure'] = float(strData[i])
         if i == 4:
-            dict['humidity'] = float(strData[i])
+            dict['humidity'] = float(strData[i][:-1]) # do not include trailing ","
             return dict
         i = i + 1
