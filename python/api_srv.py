@@ -2,12 +2,14 @@ from flask import Flask, request
 from database import Airdata, session
 import re
 from Dict import parse
+import socket
 
 app = Flask(__name__)
 
 @app.route('/')
 def start():
-    return "hiiiii"
+    host = socket.gethostname()
+    return "Host ID: {}".format(host)
 
 @app.route('/indata', methods=['POST'])
 def insert_data():
