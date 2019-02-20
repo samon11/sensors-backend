@@ -22,11 +22,13 @@ def insert_data():
         sensor_data = raw_data['data'].replace(" ", "")  
         sensor_data = (dict(x.split(':') for x in sensor_data.split(',')))
 
-
         # this timestamp is the time at which the sensor
         # pushed the data, not when the csv is made
         timestamp = raw_data['published_at']
         sensor_id = raw_data['coreid']
+
+        print(sensor_id)
+        return sensor_id
 
         # TODO - create and manage csv data
 
