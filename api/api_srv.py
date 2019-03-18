@@ -39,8 +39,8 @@ def insert_data(request):
     data_insert = Airdata(
             device_time=timestamp,
             temperature_C=sensor_data["Temp"],
-            pressure_hPa=sensor_data["Hum"],
-            humidity_perc=sensor_data["Press"],
+            pressure_hPa=sensor_data["Press"],
+            humidity_perc=sensor_data["Hum"],
             user=sensor_owner
     )
 
